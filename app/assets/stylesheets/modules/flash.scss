@@ -1,0 +1,14 @@
+.notification {
+  font-family: 'Courier New', Courier, monospace;
+  .notice {
+    background-color:red;
+    color:black;
+    text-align: center;
+  }
+
+  .alert {
+    background-color:blue;
+    color: white;
+    text-align: center;
+  }
+}
