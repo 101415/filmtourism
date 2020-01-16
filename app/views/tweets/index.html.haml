@@ -4,4 +4,5 @@
 .contents.row
   - @tweets.each do |tweet|
     = render partial: "tweet", locals: { tweet: tweet }
+    = render partial: 'tweets/tweet', collection: @tweets, as: :tweet
   = paginate(@tweets)
