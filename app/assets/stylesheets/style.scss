@@ -127,7 +127,7 @@ a {
 header.header {
   @include basePadding;
   border-bottom: 1px solid $gray;
-  background-color: #fff;
+  background-color: #c70101;
   position: fixed;
   top: 0;
   left: 0;
@@ -295,7 +295,6 @@ div.contents.row {
       left: 30px;
       right: 100px;
       bottom: 30px;
-      margin: 0;
       font-size: 20px;
       z-index: 2;
       font-weight: bold;
@@ -318,7 +317,6 @@ div.contents.row {
       span {
         font-size: 12px;
         display: block;
-        padding: 0 20px;
       }
     }
   }
