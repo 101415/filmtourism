@@ -12,6 +12,7 @@
     %span.name
       %a{:href => "/users/#{@tweet.user.id}"}
         %span 投稿者
+        -# = render 'likes/like_links', tweet: tweet
         = @tweet.user.nickname
   .container
     - if current_user
@@ -30,3 +31,4 @@
               = link_to comment.user.nickname, "/users/#{comment.user_id}"
               ：
             = comment.text
+            
