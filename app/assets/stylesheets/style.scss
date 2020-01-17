@@ -306,17 +306,17 @@ div.contents.row {
       right: 30px;
       bottom: 30px;
       z-index: 2;
-      font-size: 13px;
+      font-size: 14px;
       a {
         display: block;
-        color: #aaa;
+        color: white;
         &:hover {
           text-decoration: underline;
-          color: #aaa;
+          color:white;
         }
       }
       span {
-        font-size: 9px;
+        font-size: 12px;
         display: block;
       }
     }

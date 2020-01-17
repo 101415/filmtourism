@@ -13,5 +13,8 @@
   %span.name
     %a{:href => "/users/#{tweet.user.id}"}
       %span 投稿者
-      = tweet.user.nickname
+      = tweet.user.nickname   
       = render 'likes/like_links', tweet: tweet
+    
+
+      

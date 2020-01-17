@@ -1,1 +1,1 @@
-$("#like-buttons").html("<%= j(render partial: 'like', locals: { tweets: @tweets, likes: @likes, like: @like}) %>")
+$("<%= @id_name %>").html('<%= escape_javascript(render("likes/like_links", tweet: @tweet  )) %>');
