@@ -1,9 +1,10 @@
 .contents.row{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  margin: 0 40px;
   .content_post{
     width: 500px;
+    
   }
   
   .success{

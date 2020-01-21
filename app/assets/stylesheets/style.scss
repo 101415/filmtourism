@@ -194,16 +194,16 @@ header.header {
       position: absolute;
       top: 46px;
       right: 0;
-      border-left: 1px solid #d8d8d8;
-      border-right: 1px solid #d8d8d8;
+      border-left: 1px solid #696565;
+      border-right: 1px solid #353232;
       box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
       li {
-        background-color: #f0f0f0;
+        background-color: #3a3737;
         a {
           display: block;
           padding: 10px 20px;
           text-align: left;
-          border-bottom: 1px solid #d8d8d8;
+          border-bottom: 1px solid #494646;
         }
       }
      }
@@ -242,8 +242,9 @@ div.contents.row {
   div.content_post {
     @include boxBase(20px 0 ,30px);
     position: relative;
-    height: 400px;
-    color: #fff;
+    height: 600px;
+    width: 500px;
+    color: rgb(180, 176, 176);
     background-size: cover;
     background-position: center center;
     border-radius: 3px;
@@ -278,7 +279,7 @@ div.contents.row {
         width: 80px;
         right: 0;
         font-size: 12px;
-        background-color: #fff;
+        background-color: rgb(85, 80, 80);
         border: 1px solid #ddd;
         display: none;
         box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
@@ -358,14 +359,14 @@ form {
   }
   input[type="submit"] {
     @extend .transition;
-    background-color:white ;
+    background-color:#666 ;
     border-radius: 10px;
     transform: skew(-10deg);
     color:#292929;
     border: 0;
     font-size: 18px;
     width: 30%;
-    margin: 0 550px;
+    margin: 0 200px;
     &:hover {
       background-color: lighten(rgb(136, 218, 161), 5%);
     }
@@ -376,10 +377,12 @@ form {
   box-shadow: 0 0 10px rgba($black,0.2);
   background-color: $white;
   box-sizing: border-box;
+  width: 500px;
 }
 .comments {
   padding: 5px;
   margin-top: 15px;
+  width: 100px;
   a {
     color: $accent;
     &:hover {
