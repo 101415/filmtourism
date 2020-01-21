@@ -11,6 +11,7 @@
     src: url('font_1_honokamin.ttf') format('truetype');
     font-weight: inherit;
     font-style: normal;
+
 }
 
 @import url(http://fonts.googleapis.com/css?family=Unica+One);
@@ -39,7 +40,9 @@ $white: white;
 
 body,html {
   height: 100%;
-  background-color: $lightGray;
+  background-color: white;
+  background-image: url(https://www.pakutaso.com/shared/img/thumb/MIYAZAKI19116782_TP_V.jpg);
+  overflow: scroll;
 }
 
 body {
@@ -47,20 +50,23 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6,body {
-line-height: 1.57;
+  line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
-  color: $dark;
+  color:black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
 }
 
 a {
+  line-height: 20px;
   text-decoration: none;
-  color: $dark;
+  color:white;
   @extend .transition;
+  font-size: 16px;
+  font-family: cursive;
   &:hover {
-    color: $accent;
+    color: #a60000;
   }
 }
 
@@ -88,16 +94,16 @@ a {
 
 .btn {
     @include basePadding(8px 20px);
-    font-size: 14px;
-    border: 1px solid $accent;
-    color: $accent;
+    font-size: 12px;
+    border: 1px solid #fff;
+    color: #fff;
     font-weight: bold;
     text-align: center;
     border-radius: 3px;
     display: inline-block;
   &:hover {
-    border-color: lighten($accent, 15%);
-    color: lighten($accent, 15%);
+    border-color: lighten(#fff, 15%);
+    color: lighten(#fff, 15%);
   }
 }
 
@@ -106,7 +112,7 @@ a {
     letter-spacing: 0.15em;
     font-size: 16px;
     color: $dark;
-    font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+    font-family: cursive;
     margin: 0;
   }
 
@@ -117,6 +123,7 @@ a {
 .title--big {
   font-size: 1.5em;
   font-weight: bold;
+  font-family: cursive;
   i {
     font-style: italic;
     font-size: 1.8em;
@@ -126,32 +133,35 @@ a {
 
 header.header {
   @include basePadding;
-  border-bottom: 1px solid $gray;
-  background-color: #c70101;
+  // border-bottom: 1px solid $gray;
+  // background-color:#c70101;
   position: fixed;
+  font-family: cursive;
   top: 0;
-  left: 0;
+  left: 50px;
   right: 0;
-  z-index: 5;
-  height: 62px;
+  z-index: 0;
+  height: 60px;
   div.header__bar.row {
-    position: relative;
+    display: flex;
     h1.grid-6 {
-      font-size: 20px;
-      line-height: 41px;
-      float: left;
+      font-size: 16px;
+      line-height: 35px;
       a {
         display: block;
+        font-size: 30px;
+        color: black;
+        text-align: right;
       }
     }
     div.grid-6 {
-      float: right;
-      text-align: right;
+      text-align: center;
+      font-size: 16px;
       a.post {
         @extend .btn;
         width: 120px;
         display: inline-left;
-        margin-left: 10px;
+        font-size: 16px;
       }
     }
   }
@@ -162,7 +172,7 @@ header.header {
     span {
       top: 5px;
       display: block;
-      float: left;
+      float:right;
       margin-left: 30px;
       width: 150px;
       height: 50px;
@@ -340,7 +350,7 @@ form {
     color: $dark;
   }
   input,textarea {
-    width: 100%;
+    width: 30%;
     @include boxBase(5px 0 15px,10px);
     border: 1px solid $gray;
     border-radius: 5px;
@@ -348,13 +358,16 @@ form {
   }
   input[type="submit"] {
     @extend .transition;
-    background-color: $accent;
-    border-radius: 20px;
-    color: #fff;
+    background-color:white ;
+    border-radius: 10px;
+    transform: skew(-10deg);
+    color:#292929;
     border: 0;
     font-size: 18px;
+    width: 30%;
+    margin: 0 550px;
     &:hover {
-      background-color: lighten($accent, 10%);
+      background-color: lighten(rgb(136, 218, 161), 5%);
     }
   }
 }
@@ -377,8 +390,10 @@ form {
 
 footer {
   @include boxBase;
-  color: $gray;
+  color: black;
+  font-size: 15px;
   p {
+    padding-top: 50px;
     text-align: center;
   }
 }
@@ -387,11 +402,11 @@ footer {
   text-align: center;
   padding-top: 32px;
   .search-input {
-    width: 30%;
-    margin-right: 10px;
+    width: 20%;
+    margin-right: 20px;
   }
 
   .search-btn {
-    width: 10%;
+    width: 5%;
   }
 }
