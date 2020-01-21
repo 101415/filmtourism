@@ -1,5 +1,11 @@
 .contents.row{
-  background-color:rgb(206, 19, 19);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .content_post{
+    width: 500px;
+  }
+  
   .success{
     font-family: 'Courier New', Courier, monospace;
 
