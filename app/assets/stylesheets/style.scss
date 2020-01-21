@@ -95,10 +95,10 @@ a {
 .btn {
     @include basePadding(8px 20px);
     font-size: 12px;
-    border: 1px solid #fff;
+    border: 1px solid red;
     color: #fff;
     font-weight: bold;
-    text-align: center;
+    content: right;
     border-radius: 3px;
     display: inline-block;
   &:hover {
@@ -138,7 +138,7 @@ header.header {
   position: fixed;
   font-family: cursive;
   top: 0;
-  left: 50px;
+  left: 0;
   right: 0;
   z-index: 0;
   height: 60px;
@@ -151,7 +151,7 @@ header.header {
         display: block;
         font-size: 30px;
         color: black;
-        text-align: right;
+        text-align: center;
       }
     }
     div.grid-6 {
@@ -168,7 +168,7 @@ header.header {
   .user_nav {
     position: relative;
     height: 100px;
-    right: 0;
+    right: 10px;
     span {
       top: 5px;
       display: block;
@@ -194,8 +194,8 @@ header.header {
       position: absolute;
       top: 46px;
       right: 0;
-      border-left: 1px solid #d8d8d8;
-      border-right: 1px solid #d8d8d8;
+      border-left: 1px solid #5e5959;
+      border-right: 1px solid #242222;
       box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
       li {
         background-color: #f0f0f0;
@@ -344,7 +344,7 @@ div.contents.row {
 form {
   h3 {
     @include baseMargin(0 0 20px);
-    text-align: center;
+    text-align: left;
     font-weight: normal;
     font-size: 20px;
     color: $dark;
@@ -360,14 +360,14 @@ form {
     @extend .transition;
     background-color:white ;
     border-radius: 10px;
-    transform: skew(-10deg);
+    transform: skew(-5deg);
     color:#292929;
     border: 0;
     font-size: 18px;
     width: 30%;
     margin: 0 550px;
     &:hover {
-      background-color: lighten(rgb(136, 218, 161), 5%);
+      background-color: lighten(rgb(68, 21, 235), 5%);
     }
   }
 }
