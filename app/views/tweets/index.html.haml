@@ -2,7 +2,8 @@
   = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
   = form.submit "検索", class: "search-btn"
 .contents.row
-  - @tweets.each do |tweet|
+  -# - @tweets.each do |tweet|
+  - @all_ranks.each do |tweet|
     = render partial: "tweet", locals: { tweet: tweet }
     -# = render partial: 'tweets/tweet', collection: @tweets, as: :tweet
   = paginate(@tweets)
