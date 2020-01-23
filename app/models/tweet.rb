@@ -14,5 +14,5 @@ class Tweet < ApplicationRecord
       Tweet.all
     end
   end
-   mount_uploader :image, ImageUploader
+  mount_uploader :image, ImageUploader
 end
