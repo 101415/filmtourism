@@ -1,9 +1,10 @@
 = form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form|
   = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
   = form.submit "検索", class: "search-btn"
+  %a.btn{:href => "tweets"} 最新順
 .contents.row
   - @all_ranks.each do |tweet|
     = render partial: "tweets/tweet", locals: { tweet: tweet }
   -#  = paginate(@all_ranks)
-  %a.btn{:href => "tweets"} 最新順
+  
 
