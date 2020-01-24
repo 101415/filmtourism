@@ -3,5 +3,6 @@
   画像の選択
   = icon('fas', 'image', class: 'message-image')
   = form.file_field :image, class: 'message-image__logo'
+  = form.file_field :images, multiple: true
 = form.text_area :text, placeholder: "text" , rows: "10"
 = form.submit "SEND"
