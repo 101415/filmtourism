@@ -28,7 +28,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         set_flash_message(:notice, :success, kind: 'Google') if is_navigational_format?
     else
         flash[:error] = 'There was a problem signing you in through Google. Please register or try signing in later.'
-        redirect_to tweets_path 
+        redirect_to new_user_registraition_url
     end 
 end
 def failure
