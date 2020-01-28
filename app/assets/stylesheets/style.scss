@@ -95,8 +95,8 @@ a {
 .btn {
     @include basePadding(8px 20px);
     font-size: 12px;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid rgb(117, 113, 113);
+    color: rgb(109, 105, 105);
     font-weight: bold;
     text-align: center;
     border-radius: 3px;
@@ -113,11 +113,11 @@ a {
     font-size: 16px;
     color: $dark;
     font-family: cursive;
-    margin: 0;
   }
 
 .title {
   font-weight: bold;
+
 }
 
 .title--big {
@@ -135,7 +135,7 @@ header.header {
   @include basePadding;
   // border-bottom: 1px solid $gray;
   // background-color:#c70101;
-  position: fixed;
+  // position: fixed;
   font-family: cursive;
   top: 0;
   left: 50px;
@@ -144,9 +144,11 @@ header.header {
   height: 60px;
   div.header__bar.row {
     display: flex;
+    
     h1.grid-6 {
       font-size: 16px;
       line-height: 35px;
+      text-align: center;
       a {
         display: block;
         font-size: 30px;
@@ -198,7 +200,7 @@ header.header {
       border-right: 1px solid #d8d8d8;
       box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
       li {
-        background-color: #f0f0f0;
+        background-color: rgb(235, 82, 82);
         a {
           display: block;
           padding: 10px 20px;
@@ -268,7 +270,7 @@ div.contents.row {
       z-index: 2;
       height: 100px;
       width: 80px;
-      text-align: right;
+      text-align: center;
       &:hover ul.more_list {
         display: block;
       }
@@ -358,14 +360,14 @@ form {
   }
   input[type="submit"] {
     @extend .transition;
-    background-color:white ;
+    background-color: gray;
     border-radius: 10px;
     transform: skew(-10deg);
     color:#292929;
     border: 0;
     font-size: 18px;
-    width: 30%;
-    margin: 0 550px;
+    width: 20%;
+    margin: 0 150px;
     &:hover {
       background-color: lighten(rgb(136, 218, 161), 5%);
     }
