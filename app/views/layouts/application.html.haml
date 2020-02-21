@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Filmtourism.com
+    %title 
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
@@ -20,10 +20,10 @@
         s.parentNode.insertBefore(wf, s);
       })();
   %body
-    %header.header
+    %header
       .header__bar.row
         %h1.grid-6
-          %a{:href => "/"} Filmtourism
+          %a{:href => "/"} 
         - if user_signed_in?
           .user_nav.grid-6
             %span
@@ -33,15 +33,15 @@
                   = link_to "マイページ", "/users/#{current_user.id}"
                   = link_to "ログアウト", destroy_user_session_path, method: :delete
             = link_to  "投稿する", "/tweets/new", class: "post"
-        - else
-          .grid-6
-            %i.fas.fa-sign-in-alt
-            = link_to "ログイン", new_user_session_path, class: 'post'
+        -# - else
+        -#   .grid-6
+        -#     %i.fas.fa-sign-in-alt
+        -#     = link_to "ログイン", new_user_session_path, class: 'post'
             
-            = link_to "新規登録", new_user_registration_path, class: 'post'
+        -#     = link_to "新規登録", new_user_registration_path, class: 'post'
             %i.fas.fa-user-plus
     = render 'layouts/notifications'
     = yield
     %footer
       %p
-        COPYRIGHT ©2020 filmtourism ALL RIGHTS RESERVED.
+    
