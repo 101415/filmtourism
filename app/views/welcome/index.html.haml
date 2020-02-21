@@ -1,4 +1,23 @@
-%p= button_to "ログイン", new_user_session_path, method: :get
-%p= button_to"新規登録", new_user_registration_path, method: :get
-%p= button_to "ゲストユーザー", tweets_path, method: :get
-%p= button_to 'Google', user_google_omniauth_authorize_path, method: :get
+-# %p= button_to "ログイン", new_user_session_path, method: :get
+-# %p= button_to"新規登録", new_user_registration_path, method: :get
+-# %p= button_to "ゲストユーザー", tweets_path, method: :get
+-# %p= button_to 'Google', user_google_omniauth_authorize_path, method: :get
+.header
+  .logo
+    Filmtourism
+  %P
+    = link_to"簡単ログイン",tweets_path,class:"logo2", method: :get
+  %p
+    = link_to"サインアップ", new_user_registration_path,class:"logo2"
+  %p
+    = link_to "ログイン",new_user_session_path,class:"logo2"
+  %p
+    = link_to "Googleログイン", user_google_omniauth_authorize_path,class:"logo2", method: :get
+.content
+  .main_logo
+    Filmtourism
+  .description
+    あなただけのanother skyを投稿しよう。
+.footer
+  .footer_logo
+    ©2020 filmtourism

@@ -1,6 +1,7 @@
-.contents.row
+.contents.row1
+  = render "welcome/header"
   .container
-    %h2 LOGIN
+    %h2 ログイン
     = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
       .field
         = f.label :email
@@ -10,11 +11,6 @@
         = f.label :password
         %br/
         = f.password_field :password, autocomplete: "off"
-      - if devise_mapping.rememberable?
-        .field
-          = f.label :パスワードを記憶
-          %br/
-          = f.check_box :パスワードを記憶
-          = render "devise/shared/links"
       .actions
-        = f.submit "LOGIN"
+        = f.submit "Log in"
+      = render "welcome/footer"
