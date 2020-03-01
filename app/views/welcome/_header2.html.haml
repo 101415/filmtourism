@@ -1,0 +1,9 @@
+.header
+  .logo
+    Filmtourism
+  %P
+    = link_to  "投稿する", "/tweets/new", class: "logo2"
+  %p
+    = link_to "マイページ", "/users/#{current_user.id}",class:"logo2"
+  %p
+    = link_to "ログアウト", destroy_user_session_path, method: :delete,class:"logo2"

@@ -1,0 +1,28 @@
+.header{
+  background:#1a1a1a;
+  height: 70px;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: flex;
+  color: white;
+  .logo{
+  margin: 20px 40px;
+  font-size: 30px;
+  width: 55%;
+  }
+  p {
+  font-size: 16px;
+  margin: 20px 10px;
+  height: 30px;
+  width: 160px;
+  text-align: center;
+  line-height: 30px;
+  border-left : solid 3px white;
+  border-bottom : solid 1px white;
+  cursor: pointer;
+  color: white;
+    .logo2{
+      text-decoration: none;
+      color: white;
+    }
+  }
+}

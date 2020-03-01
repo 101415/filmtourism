@@ -21,18 +21,19 @@
       })();
   %body
     %header
+      = render "welcome/header2"
       .header__bar.row
         %h1.grid-6
           %a{:href => "/"} 
         - if user_signed_in?
-          .user_nav.grid-6
-            %span
-              = current_user.nickname
-              %ul.user__info
-                %li
-                  = link_to "マイページ", "/users/#{current_user.id}"
-                  = link_to "ログアウト", destroy_user_session_path, method: :delete
-            = link_to  "投稿する", "/tweets/new", class: "post"
+          -# .user_nav.grid-6
+          -#   %span
+          -#     = current_user.nickname
+          -#     %ul.user__info
+          -#       %li
+          -#         = link_to "マイページ", "/users/#{current_user.id}"
+          -#         = link_to "ログアウト", destroy_user_session_path, method: :delete
+          -#   = link_to  "投稿する", "/tweets/new", class: "post"
         -# - else
         -#   .grid-6
         -#     %i.fas.fa-sign-in-alt
@@ -42,6 +43,8 @@
             %i.fas.fa-user-plus
     = render 'layouts/notifications'
     = yield
+    = render "welcome/footer"
     %footer
+  
       %p
     
