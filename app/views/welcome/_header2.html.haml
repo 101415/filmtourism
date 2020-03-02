@@ -4,6 +4,11 @@
   %P
     = link_to  "投稿する", "/tweets/new", class: "logo2"
   %p
-    = link_to "マイページ", "/users/#{current_user.id}",class:"logo2"
+    - if current_user
+      = link_to "マイページ", "/users/#{current_user.id}",class:"logo2"
+    - if session[:guest_user_id] 
+      = link_to"サインアップ", new_user_registration_path,class:"logo2"
   %p
     = link_to "ログアウト", destroy_user_session_path, method: :delete,class:"logo2"
+  %p
+    = link_to "投稿一覧",tweets_path,class: "logo2"
