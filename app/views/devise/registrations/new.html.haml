@@ -1,5 +1,4 @@
 .contents.row1
-  = render "welcome/header"
   .container
     %h2 会員登録
     = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
@@ -27,5 +26,4 @@
         = f.password_field :password_confirmation, autocomplete: "off"
       .actions
         = f.submit "Sign up"
-    = render "welcome/footer"
 
