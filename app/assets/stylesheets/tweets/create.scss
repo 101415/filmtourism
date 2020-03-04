@@ -1,14 +1,21 @@
-.contents.row{
-  display: flex;
-  justify-content: space-around;
-  
-  .content_post{
-    width: 400px;
-  }
-  
-  .success{
-    font-family: 'Courier New', Courier, monospace;
 
-
+  .contents.row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    background: linear-gradient(-135deg, #E4A972, #9941D8);
+    .content_post{
+      display: flex;
+      justify-content: space-between;
+      width: 30%;
+      height: 150px;
+      padding-bottom: 20%;
+      background-position: center;
+      background-size: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      
+    }
   }
-}
