@@ -51,7 +51,7 @@ production:
   <<: *default
   database: filmtourism_production
   username: filmtourism
-  password: <%= ENV['FILMTOURISM_DATABASE_PASSWORD'] %>
+  # password: <%= ENV['FILMTOURISM_DATABASE_PASSWORD'] %>
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
