@@ -29,22 +29,14 @@ set :default_env, {
   rbenv_root: "/usr/local/rbenv",
   path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
   AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
-  AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"],
+  AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
 }
 
 # デプロイ処理が終わった後、Unicornを再起動するための記述
-# after 'deploy:publishing', 'deploy:restart'
-# namespace :deploy do
-#   task :restart do
-#     invoke 'unicorn:restart'
-#   end
-# end
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      invoke 'unicorn:stop'
-      invoke 'unicorn:start'
-    end
+    invoke 'unicorn:restart'
   end
 end
+
