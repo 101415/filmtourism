@@ -33,9 +33,18 @@ set :default_env, {
 }
 
 # デプロイ処理が終わった後、Unicornを再起動するための記述
+# after 'deploy:publishing', 'deploy:restart'
+# namespace :deploy do
+#   task :restart do
+#     invoke 'unicorn:restart'
+#   end
+# end
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
-    invoke 'unicorn:restart'
+    on roles(:app), in: :sequence, wait: 5 do
+      invoke 'unicorn:stop'
+      invoke 'unicorn:start'
+    end
   end
 end
