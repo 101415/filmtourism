@@ -1,0 +1,43 @@
+.content_post{
+  .more{
+    .more_list{      
+      margin-top: 390px;
+      display: flex;
+      justify-content: space-between;
+      li{
+        background:white;
+        text-align: center;
+        line-height: 25px;
+        margin: 3px;
+        cursor: pointer;
+        border-radius: 5px;
+        a, a:hover, a:visited{
+          color:rgb(64, 120, 241);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  p {
+    margin-top:400px ;
+    font-size: 20px;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    color:rgb(64, 120, 241);
+    background-color: white;
+    border-radius: 5px;
+  }
+  .name{
+    margin-top: 370px;
+    background: white;
+    height: 25px;
+    border-radius: 5px;
+    a, a:hover, a:visited{
+      color:rgb(64, 120, 241);
+      text-decoration: none;
+    }
+
+  }
+}
