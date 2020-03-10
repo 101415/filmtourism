@@ -20,6 +20,7 @@ class TweetsController < ApplicationController
   end
   
   def edit
+    @images = @tweet.image
   end
 
   def update
