@@ -41,3 +41,40 @@
 
   }
 }
+.main_block{
+  text-align: center;
+  width: 130px;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  .block1{
+    border-left : solid 3px rgb(55, 192, 247);
+    border-bottom : solid 1px rgb(59, 191, 243);
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 50px;
+    line-height: 30px;
+    
+  }
+  .block2{
+    border-left : solid 3px rgb(54, 188, 241);
+    border-bottom : solid 1px rgb(43, 189, 247);
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 50px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .block3{
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 50px;
+    border-left : solid 3px rgb(35, 183, 241);
+    border-bottom : solid 1px rgb(37, 185, 243);
+    line-height: 30px;
+  }
+  .block4{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    height: 30px;
+    line-height: 30px;
+    
+  }
+}

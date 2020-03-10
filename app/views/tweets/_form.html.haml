@@ -7,6 +7,8 @@
       %script{:src => "item_new.js", :type => "text/javascript"}
       = form.fields_for :image, class: 'hidden-field' do
         = form.file_field :image, class: 'hidden-field'
-= form.text_area :text, placeholder: "タイトル" ,class:'title', rows: "10"
+= form.text_area :text, placeholder: "写真のタイトル" ,class:'title', rows: "10"
+= form.text_area :place, placeholder: "場所" ,class:'title', rows: "10" 
+= form.text_area :title, class: "title", placeholder: "関連している映画名" 
 = form.submit "投稿",class: 'send'
 

@@ -2,23 +2,31 @@
   .content_post{:style => "background-image: url(#{@tweet.image});"}
     - if user_signed_in? && current_user.id == @tweet.user_id
       .more
-        %span= image_tag 'arrow_top.png'
         %ul.more_list
           %li
             = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
           %li
             = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
-    = simple_format(@tweet.text)
     %span.name
       %a{:href => "/users/#{@tweet.user.id}"}
-        %span 投稿者
+        %span 投稿者:
         = @tweet.user.nickname
-        = render 'likes/like_links', tweet: @tweet
+      = render 'likes/like_links', tweet: @tweet
+  .main_block
+    .block1
+      写真のタイトル
+    = simple_format(@tweet.text, class: 'block4')
+    .block2
+      場所
+    = simple_format(@tweet.place,class: 'block4')
+    .block3
+      映画のタイトル
+    = simple_format(@tweet.title,class: 'block4')
   .container
     - if current_user
       = form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form|
-        = form.text_area :text, placeholder: "コメントする" , rows: "2", class: "textbox"
-        = form.submit "SEND", class: "form__submit"
+        = form.text_area :text, placeholder: "コメントする" , rows: "2", class: "title"
+        = form.submit "送信", class: "send"
     - else
       %strong
         %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
