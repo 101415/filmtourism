@@ -2,16 +2,25 @@
 自分の好きな写真を投稿できる。
 # フロント
 ・Haml
+
 ・Scss
+
 # バックエンド
 ・Ruby 2.5.1
+
 ・Rails 5.2.4.1
+
 # サーバー
 ・Nginx
+
 ・MySQL 5.6
+
 ・AWS（EC2, S3）
+
 ・Capistrano3
+
 ・unicorn
+
 # 機能一覧
 ・ユーザー登録・ユーザーログイン機能（devise）
 
