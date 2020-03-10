@@ -1,7 +1,12 @@
+.upload-area
+  .post__drop__box__container
+    .prev-content
+    .label-content
+      %label{for: "item_images_attributes_0_image", class: "abel-box", id: "label-box--0"}
+    .hidden-content
+      %script{:src => "item_new.js", :type => "text/javascript"}
+      = form.fields_for :image, class: 'hidden-field' do
+        = form.file_field :image, class: 'hidden-field'
+= form.text_area :text, placeholder: "タイトル" ,class:'title', rows: "10"
+= form.submit "投稿",class: 'send'
 
-= form.label :image, class: 'message-image' do
-  画像の選択
-  = icon('fas', 'image', class: 'message-image')
-  = form.file_field :image, class: 'message-image__logo'
-= form.text_area :text, placeholder: "text" , rows: "10"
-= form.submit "SEND"
