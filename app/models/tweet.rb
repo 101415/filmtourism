@@ -1,5 +1,5 @@
 class Tweet < ApplicationRecord
-  validates :text, presence: true
+  validates :text, length: { maximum: 11 }
   validates :place, presence: true
   validates :title, presence: true
   belongs_to :user
